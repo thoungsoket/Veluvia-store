@@ -569,56 +569,60 @@
             text-decoration: underline;
         }
 
-        /* Responsive Design */
-         @media (max-width: 768px) {
+         /* Responsive Design */
+        @media (max-width: 768px) {
             .header-content {
-                padding: 0 20px;
-                flex-direction: column;
-                height: auto;
-                gap: 20px;
-            }
-
-            .nav-menu {
-                flex-wrap: wrap;
-                gap: 20px;
-            }
-            .main-content {
-                flex-direction: column;
-                padding: 40px 20px 0;
-            }
-
-            .product-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .nav-menu {
-                display: none;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 30px;
-            }
+            padding: 0 20px;
+            flex-direction: column;
+            height: auto;
+            gap: 20px;
+            text-align: center;
         }
+
+        .nav-menu {
+            display: flex;           /* Show nav menu */
+            flex-direction: row;     /* Keep horizontal */
+            flex-wrap: wrap;         /* Allow wrapping */
+            gap: 20px;
+            justify-content: center; /* Center nav items */
+            overflow-x: auto;        /* Enable horizontal scroll if needed */
+            -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+            padding-top: 10px;
+        }
+
+        .main-content {
+            flex-direction: column;
+            padding: 40px 20px 0;
+        }
+
+        .product-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-content {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .footer-links {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
 
         @media (max-width: 480px) {
             .product-grid {
-                grid-template-columns: 1fr;
-            }
+            grid-template-columns: 1fr;
+        }
 
-            .header {
-                padding: 0 20px;
-            }
+        .header {
+            padding: 0 20px;
+        }
 
-            .logo {
-                font-size: 36px;
-            }
-        }    
+        .logo {
+            font-size: 36px;
+        }
+    }
             
     </style>
 </head>
